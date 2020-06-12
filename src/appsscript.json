@@ -1,0 +1,17 @@
+{
+  "timeZone": "America/New_York",
+  "dependencies": {
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "dataStudio": {
+    "name": "datastudio-hubspot-connector",
+    "logoUrl": "https://ovly.com.br/wp-content/uploads/2018/08/Ovly-Logo-Color-White-Background.jpg",
+    "company": "OVLY",
+    "companyUrl": "http://ovly.com.br/",
+    "addonUrl": "https://github.com/fabiopagoti/datastudio-hubspot-connector/",
+    "supportUrl": "https://github.com/fabiopagoti/datastudio-hubspot-connector/issues",
+    "description": "Unofficial (but free) HubSpot connector",
+    "sources": ["HubSpot"]
+  }
+}

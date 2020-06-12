@@ -24,6 +24,8 @@ The following links are relevant if you aim to contribute in this project as a d
 * [Google Data Studio](https://datastudio.google.com/)
    - [Developer1s site](https://developers.google.com/datastudio)
    - [Build Community Connectors](https://developers.google.com/datastudio/connector) 
+   - [Tooling](https://github.com/googledatastudio/tooling)
+      - [dscc-gen - Community Connector Generator](https://github.com/googledatastudio/tooling/tree/master/packages/dscc-gen)
 * [Google App Script](https://script.google.com/)
    - [Data Studio API Reference](https://developers.google.com/apps-script/reference/data-studio/data-studio-app)
    - [CodeLab - Connect and visualize all your data in Data Studio](https://codelabs.developers.google.com/codelabs/community-connectors/#0)

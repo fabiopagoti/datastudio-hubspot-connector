@@ -5,7 +5,7 @@
   "exceptionLogging": "STACKDRIVER",
   "runtimeVersion": "V8",
   "dataStudio": {
-    "name": "datastudio-hubspot-connector",
+    "name": "HubSpot",
     "logoUrl": "https://ovly.com.br/wp-content/uploads/2018/08/Ovly-Logo-Color-White-Background.jpg",
     "company": "OVLY",
     "companyUrl": "http://ovly.com.br/",

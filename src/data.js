@@ -81,7 +81,10 @@ function getDataContacts(request) {
 
   var sPath = getFullPath(
     request.configParams.input_apikey,
-    this.endpoint.crm.contacts
+    this.endpoint.crm.contacts,
+    {
+      limit: 100
+    }
   );
 
   var oResponse = UrlFetchApp.fetch(sPath, {

@@ -1,7 +1,7 @@
 function throwConnectorError(text) {
-    DataStudioApp.createCommunityConnector()
-      .newUserError()
-      .setDebugText(text)
-      .setText(text)
-      .throwException();
-  }
+  DataStudioApp.createCommunityConnector()
+    .newUserError()
+    .setDebugText(text)
+    .setText(text)
+    .throwException();
+}

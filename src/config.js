@@ -1,6 +1,13 @@
-// https://developers.google.com/datastudio/connector/reference#getconfig
+var oSampleConfig = {
+  input_apikey: "",
+  select_object: ["option_contacts", "option_companies"]
+};
 
+// https://developers.google.com/datastudio/connector/reference#getconfig
 function getConfig(request) {
+  Logger.log("Configuration requested");
+  Logger.log(request);
+
   var config = cc.getConfig();
 
   config
@@ -10,11 +17,14 @@ function getConfig(request) {
       "Thanks for using this connector. Please fill the form below in order to connect your HubSpot account."
     );
 
-  config.newTextInput()
-      .setId("input_apikey")
-      .setName("API Key *")
-      .setHelpText("Check https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key to get your API key")
-      .setPlaceholder("aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee");
+  config
+    .newTextInput()
+    .setId("input_apikey")
+    .setName("API Key *")
+    .setHelpText(
+      "Check https://knowledge.hubspot.com/integrations/how-do-i-get-my-hubspot-api-key to get your API key"
+    )
+    .setPlaceholder("aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee");
 
   config
     .newSelectSingle()
@@ -37,23 +47,22 @@ function getConfig(request) {
   return config.build();
 }
 
-
-function validateConfig(request){
+function validateConfig(request) {
   request.configParams = request.configParams || {};
   var config = request.configParams;
 
   if (!config.input_apikey) {
-    throw new Error("API key cannot be blank");    
+    throw new Error("API key cannot be blank");
   }
 
   if (!config.select_object) {
-    throw new Error("Object cannot be blank");    
+    throw new Error("Object cannot be blank");
   }
-  
-  try{
+
+  try {
     checkConnection(config.input_apikey);
-  } catch(e){
-    throw e;    
+  } catch (e) {
+    throw e;
   }
 
   return request;

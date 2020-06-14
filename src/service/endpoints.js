@@ -10,12 +10,11 @@ var endpoint = {
 function getFullPath(apikey, sPath, oQuery) {
   var sFullPathWithoutQuery = this.endpoint.base + sPath;
   var oQueryWithAuth = oQuery || {};
-  
+
   oQueryWithAuth.hapikey = apikey;
-  
+
   return sFullPathWithoutQuery.addQuery(oQueryWithAuth);
 }
-
 
 function connectWithHubSpot(sQuery) {
   var response = UrlFetchApp.fetch("?hapikey=&q=" + sQuery);
